@@ -1,0 +1,25 @@
+.converter-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #969696;
+  padding: 30px 10px;
+  width: fit-content;
+  border-radius: 10px;
+  margin-top: 40px;
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 500px) {
+    border: none;
+    margin-top: 10px;
+  }
+}
+.swap-icon {
+  width: auto;
+  height: auto;
+  font-size: 64px;
+  color: #15c;
+  @media screen and (max-width: 1000px) {
+    transform: rotate(90deg);
+  }
+}

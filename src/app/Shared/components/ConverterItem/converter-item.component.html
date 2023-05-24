@@ -1,0 +1,19 @@
+<div class="converter-item">
+  <select
+    #currencyRate
+    (change)="changeRate({ target: currencyRate, side, oppositeSide })"
+  >
+    <option *ngFor="let currency of currencies" value="{{ currency.rate }}">
+      {{ currency.cc }} | {{ currency.txt }}
+    </option>
+    <option selected value="1">UAH | Украинская гривна</option>
+  </select>
+  <input
+    min="0"
+    value="{{ block.value }}"
+    type="number"
+    placeholder="Value"
+    #currencyInput
+    (input)="enterCurrency({ target: currencyInput, side, oppositeSide })"
+  />
+</div>

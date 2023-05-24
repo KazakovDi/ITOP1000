@@ -1,0 +1,20 @@
+<header class="header">
+  <container>
+    <h1>
+      Актуальный курс валют
+      <div class="currencies">
+        <actual-currency
+          *ngFor="let currency of currencies"
+          [currency]="currency"
+        ></actual-currency>
+      </div>
+    </h1>
+  </container>
+</header>
+<main>
+  <container>
+    <div class="flex-center">
+      <converter [currencies]="currencies"> </converter>
+    </div>
+  </container>
+</main>

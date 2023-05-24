@@ -1,0 +1,22 @@
+<div class="converter-wrapper">
+  <converter-item
+    (CurrencyName)="changeValue($event)"
+    (CurrencyRate)="changeRate($event)"
+    [currencies]="currencies"
+    [block]="blocks.left"
+    [oppositeBlock]="blocks.right"
+    [side]="'left'"
+    [oppositeSide]="'right'"
+  ></converter-item>
+
+  <mat-icon class="swap-icon">swap_horiz</mat-icon>
+  <converter-item
+    (CurrencyName)="changeValue($event)"
+    (CurrencyRate)="changeRate($event)"
+    [currencies]="currencies"
+    [block]="blocks.right"
+    [oppositeBlock]="blocks.left"
+    [side]="'right'"
+    [oppositeSide]="'left'"
+  ></converter-item>
+</div>
